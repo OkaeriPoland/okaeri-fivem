@@ -68,5 +68,10 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
         print('[OK! No.Proxy] Zablokowano gracza ' .. playerName .. ' (IP: ' .. playerAddress .. ')')
     end
 
-    PerformHttpRequest('https://noproxy-api.okaeri.eu/v1/' .. playerAddress, onResponse, 'GET', nil, { 'Authorization: Bearer ' .. NoProxyConfig.Token })
+    local headers = {
+        ['User-Agent'] = 'Okaeri-FiveM/1.0 (noproxy)',
+        ['Authorization'] = 'Bearer ' .. NoProxyConfig.Token
+    }
+
+    PerformHttpRequest('https://noproxy-api.okaeri.eu/v1/' .. playerAddress, onResponse, 'GET', nil, headers)
 end)
