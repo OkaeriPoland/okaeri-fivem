@@ -59,6 +59,7 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
         end
 
         if not resolveIfBlock(response) then
+            deferrals.done()
             return
         end
 
