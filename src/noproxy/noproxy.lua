@@ -25,7 +25,7 @@ function splitString(text, separator)
 end
 
 function resolveIfBlock(response)
-    return string.find(str, '"block": ?true')
+    return string.find(response, '"block": ?true')
 end
 
 function resolvePlayerIp(source)
