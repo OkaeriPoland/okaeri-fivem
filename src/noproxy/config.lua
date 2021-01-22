@@ -12,7 +12,7 @@ NoProxyConfig = {
     Token = ""
 }
 
---- Wiadomosci
+--- Wiadomości
 NoProxyMessages = {
     Verification = "Trwa weryfikacja twojego adresu. Prosze czekaj.",
     Proxy = "Korzystanie z serwerow VPN lub proxy jest zabronione na tym serwerze. Jesli uwazasz to za blad, skontaktuj sie z administracja. Pomoc: https://example.com/forum"

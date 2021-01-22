@@ -10,13 +10,13 @@
 AiCensorConfig = {
     --- Klucz prywatny API
     Token = "",
-    --- Czy filtrować nick pod kątem wulgaryzmów.
+    --- Czy filtrować nick pod kątem wulgaryzmów
     FilterUsernames = false,
-    --- Czy filtrować wiadomości pod kątem wulgaryzmów.
+    --- Czy filtrować wiadomości pod kątem wulgaryzmów
     FilterMessages = true
 }
 
---- Wiadomość
+--- Wiadomości
 AiCensorMessages = {
     Blocked = "Twoja wiadomosc zawierala niedozwolone slowa i zostala zablokowana."
 }
