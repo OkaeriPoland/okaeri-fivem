@@ -55,6 +55,7 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
 
         if not response then
             print('[OK! No.Proxy] Nie udalo sie zweryfikowac gracza ' .. playerName .. ', kod ' .. statusCode .. ': ' .. response)
+            deferrals.done()
             return
         end
 
