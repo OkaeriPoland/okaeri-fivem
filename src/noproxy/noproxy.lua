@@ -24,11 +24,6 @@ function splitString(text, separator)
     return parts
 end
 
-function resolveIfBlock(response)
-    local data = json.decode(response)
-    return data.suggestions.block
-end
-
 function resolvePlayerIp(source)
     local ip = GetPlayerEP(source)
     if not string.match(ip, ':') then
@@ -60,7 +55,8 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
             return
         end
 
-        if not resolveIfBlock(response) then
+        local data = json.decode(response)
+        if not data.suggestions.block then
             deferrals.done()
             return
         end
