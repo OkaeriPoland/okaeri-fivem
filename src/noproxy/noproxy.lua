@@ -25,7 +25,8 @@ function splitString(text, separator)
 end
 
 function resolveIfBlock(response)
-    return string.find(response, '"block": ?true')
+    local data = json.decode(response)
+    return data.suggestions.block
 end
 
 function resolvePlayerIp(source)
