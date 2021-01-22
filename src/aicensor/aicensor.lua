@@ -28,7 +28,7 @@ AddEventHandler('chatMessage', function(source, name, message)
         end
 
         local data = json.decode(response)
-        if data.general.swear == false then
+        if not data.general.swear then
             return
         end
 
