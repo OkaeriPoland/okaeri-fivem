@@ -29,7 +29,7 @@ function resolveIfBlock(response)
 end
 
 function resolvePlayerIp(source)
-    ip = GetPlayerEP(source)
+    local ip = GetPlayerEP(source)
     if not string.match(ip, ':') then
         return ip
     end
